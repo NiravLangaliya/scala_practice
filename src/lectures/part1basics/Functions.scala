@@ -26,4 +26,20 @@ object Functions extends App {
 	// but in case of a recursive function, you haven't to define return type as complier couldn't
 	// able to figure it out.
 	
+	// you can define function with return type as unit
+	
+	def afunctionwithUnittype(a: String): Unit = println(a)
+	
+	afunctionwithUnittype("Hello Unit")
+	
+	def aBigfunction(n: Int): Int = {
+		{
+			def aSamllFunction(x: Int, y: Int): Int = x + y
+			
+			aSamllFunction(4, 6)
+		}
+		
+	}
+	
+	println(aBigfunction(3))
 }
