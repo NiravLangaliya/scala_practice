@@ -18,6 +18,16 @@ object Recursion extends App {
 	
 	println(concatenateTailrec("Hello ", 5, "How are you"))
 	
+	
+	@tailrec
+	def concatenateTailrec1( n: Int,aString : String = ""): String
+	= {
+		if (n <= 0) aString
+		else concatenateTailrec1(n - 1: Int, aString + " Hello")
+	}
+	
+	println(concatenateTailrec1(7))
+	
 	// 2. IsPrime Function tail recursive
 	
 	def functionIsPrimt(n: Int): Boolean = {
